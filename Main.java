@@ -3,7 +3,7 @@ import java.util.List;
 
 
 
-class Itemz {
+class Item {
 
     String name;
 
@@ -17,7 +17,7 @@ class Itemz {
 
 
 
-    Itemz(String n, double p, int q) {
+    Item(String n, double p, int q) {
 
         name = n;
 
@@ -43,7 +43,7 @@ class Itemz {
 
 class shoppinCart {
 
-    List<Itemz> items;
+    List<Item> items;
 
     double taxRate = 0.08;
 
@@ -65,7 +65,7 @@ class shoppinCart {
 
 
 
-    void addItem(Itemz item) {
+    void addItem(Item item) {
 
         items.add(item);
 
@@ -77,7 +77,7 @@ class shoppinCart {
 
         double subtotal = 0;
 
-        for (Itemz item : items) {
+        for (Item item : items) {
 
             subtotal += item.getTotal();
 
@@ -139,11 +139,11 @@ public class Main {
 
         shoppinCart cart = new shoppinCart();
 
-        Itemz item1 = new Itemz("Apple", 1.5, 10);
+        Item item1 = new Item("Apple", 1.5, 10);
 
-        Itemz item2 = new Itemz("Banana", 0.5, 5);
+        Item item2 = new Item("Banana", 0.5, 5);
 
-        Itemz item3 = new Itemz("Laptop", 1000, 1); // Price is valid here
+        Item item3 = new Item("Laptop", 1000, 1); // Price is valid here
 
         item3.category = "electronics";
 
